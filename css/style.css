@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(233, 47%, 7%);
+    color: white;
+}
+main {
+    border-radius: 10px;
+    width: fit-content;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.text h1,.text p,.text mark,.value,.text {
+    background-color: hsl(244, 38%, 16%);
+}
+.text {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    width: 450px;
+    padding: 50px;
+}
+.text h1 mark {
+    color:hsl(277, 64%, 61%);
+}
+.text h1 {
+    margin-bottom: 2rem;
+}
+.img {
+    background-image: url(/images/image-header-desktop.jpg);
+    width: 450px;
+    height: 355px;
+    background-repeat: no-repeat;
+
+}
+.img div {
+    background-color: hsl(277, 64%, 61%);
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+}
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+.value mark {
+    font-size: 15px;
+    font-weight: 400;
+}
+p > mark,.text > p {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+@media only screen and (max-width:855px) {
+    .img {
+        background-image: url(/images/image-header-mobile.jpg);
+    }
+    main {
+        flex-direction: column;
+    }
+    .img {
+        order: 1;
+        width: 375px;
+        background-position: cover;
+        background-size: 375px;
+        height: 270px;
+    }
+    .text {
+        order: 2;
+        width: 375px;
+        text-align: center;
+    }
+    .value {
+        flex-direction: column;
+        margin: 2rem 0px;
+    }
+    .value p {
+        margin: 1rem 0px;
+    }
+}
